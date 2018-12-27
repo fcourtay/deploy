@@ -1,1 +1,1 @@
-Homebrew Script for MacOS deployment
+Scripts for OS Deployments
