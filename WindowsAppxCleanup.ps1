@@ -43,7 +43,7 @@ foreach ($App in $AppArrayList) {
         $AppProvisioningPackageName = Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -like $App.Name } | Select-Object -ExpandProperty PackageName
 
         # Attempt to remove AppxPackage
-        if ($AppPackageFullName -ne $null) {
+        if ($null -ne $AppPackageFullName) {
             try {
                 WriteLog -LogFile $LogFile -LineOfText  "Removing application package: $($App.Name)"
                 Remove-AppxPackage -Package $AppPackageFullName -ErrorAction Stop | Out-Null
@@ -57,7 +57,7 @@ foreach ($App in $AppArrayList) {
         }
 
         # Attempt to remove AppxProvisioningPackage
-        if ($AppProvisioningPackageName -ne $null) {
+        if ($null -ne $AppProvisioningPackageName ) {
             try {
                 WriteLog -LogFile $LogFile -LineOfText  "Removing application provisioning package: $($AppProvisioningPackageName)"
                 Remove-AppxProvisionedPackage -PackageName $AppProvisioningPackageName -Online -ErrorAction Stop | Out-Null

@@ -38,7 +38,7 @@ Write-Host "[START] $StartTime"
 Install-PackageProvider -Name $NuGetName -MinimumVersion 2.8.5.201 -Force
 
 ## Verify installed
-$NuGetInstalled = [bool](Get-PackageProvider | ?{$_.Name -eq $NuGetName}).count
+$NuGetInstalled = [bool](Get-PackageProvider | where-object{$_.Name -eq $NuGetName}).count
 if($NuGetInstalled){
     ## Continue
 
