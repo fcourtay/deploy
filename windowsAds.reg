@@ -1,0 +1,38 @@
+;Remove IE_EdgeButton
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Internet Explorer\Main]
+"HideNewEdgeButton"=dword:00000001
+
+;Set Open explorer to This Pc
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"LaunchTo"=dword:00000001
+
+;ContentDeliveryManager Disable Ad's and Annoyances
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"ContentDeliveryAllowed"=dword:00000000
+"PreInstalledAppsEnabled"=dword:00000000
+"OemPreInstalledAppsEnabled"=dword:00000000
+"FeatureManagementEnabled"=dword:00000000
+"RotatingLockScreenOverlayEnabled"=dword:00000000
+"RotatingLockScreenEnabled"=dword:00000000
+"SystemPaneSuggestionsEnabled"=dword:00000000
+"SilentInstalledAppsEnabled"=dword:00000000
+"SoftLandingEnabled"=dword:00000000
+"SubscribedContentEnabled"=dword:00000000
+"SubscribedContent-310093Enabled"=dword:00000000
+"SubscribedContent-338389Enabled"=dword:00000000
+"SubscribedContent-338387Enabled"=dword:00000000
+"SubscribedContent-338388Enabled"=dword:00000000
+"SubscribedContent-310093Enabled"=dword:00000000
+
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Windows\CurrentVersion\Lock Screen\Creative] 
+"CreativeJson"=""
+
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo] 
+"Enabled"=dword:00000000
+
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Windows\CurrentVersion\Privacy] 
+"TailoredExperiencesWithDiagnosticDataEnabled"=dword:00000000
+
+;Disable People app in taskbar
+[HKEY_USERS\CUSTOM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People]
+"PeopleBand"=dword:00000000
