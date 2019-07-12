@@ -1,0 +1,22 @@
+{
+
+    "interfaces": {
+                "ethernet": {
+                        "eth0": {
+                                "description": "eth0 - FTTH",
+                                "duplex": "Full",
+                                "speed": "1000"
+                        }
+                }
+    },
+        "service": {
+                "dns": {
+                        "forwarding": {
+                                "options": [
+                                        "rebind-domain-ok=plex.direct",
+                                        "rebind-domain-ok=/plex.direct/"
+                                ]
+                        }
+                }
+        }
+}
